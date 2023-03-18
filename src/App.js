@@ -1,9 +1,21 @@
 
+import { GlobalStyled } from "./GlobalStyled";
+import Router from "./routes/router";
+import "./app.css";
+
+
 
 
 function App() {
   return (
-    <div>Oiiiii</div>
+    <>
+    
+    <GlobalStyled/>
+    <Router/>
+   
+    </>
+
+  
   );
 }
 
