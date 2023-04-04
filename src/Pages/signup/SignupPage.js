@@ -1,48 +1,55 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Header from "../../components/header/Header"
 import { Button, Container, Contracts } from './SignupStyled'
 import botaoCadastrar from "../../assets/img/cadastrar.svg"
-import { goToLoginPage } from '../../routes/coordinator'
+import { BASE_URL } from '../../constants/url'
+import axios from 'axios'
+import { goToPostPage } from '../../routes/coordinator'
 
 function SignupPage() {
 
   const [apelido, setApelido] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [emailSignup, setEmailSignup] = useState("")
+  const [passwordSignup, setPasswordSignup] = useState("")
+
+  const [token,setToken]= useState("")
 
 
   const navigate = useNavigate()
 
-  const inputSignup= {
-    "name": apelido,
-    "email":emailLogin,
-    "password": passwordLogin
-  }
-
-  useEffect(() => {
-    postSignup()
-  },[])
+ 
+  // useEffect(() => {
+  //   //verifica se usuário ja esta logado
+  //   // postSignup()
+  // },[])
 
   //criar função para requisição
   const postSignup = async() => {
+
+    const inputSignup= {
+      "name":apelido,
+      "email":emailSignup,
+      "password":passwordSignup
+    }
+
+
     try{
       const response= await axios.post(`${BASE_URL}/users/signup`, inputSignup)
-      // const token =response.data.token
-      // setToken(response.data.token)
-      setApelido(response.data.name)
-      setEmail(response.data.name)
-      setPassword(response.data.name)
-      window.localStorage.setItem("token", token)
+      window.localStorage.setItem('token', response.data.token)
 
-      if(token){
-        goToPostPage(navigate)
-      }else {
-        goToLoginPage(navigate)
-      }
+      setToken(response.data.token)
+      setApelido(response.data.name)
+      setEmailSignup(response.data.email)
+      setPasswordSignup(response.data.password)
+
+      goToPostPage(navigate)
+
+      // window.location.reload()
 
     }catch(erro) {
       console.log(erro)
+      // alert(erro.response.data.message)
     }
   }
 
@@ -56,13 +63,13 @@ function SignupPage() {
 <h1 className='fraseOla'>Olá, boas vindas ao
 <br/> LabEddit;) </h1>
 
-<input valeu={apelido} onChange={(e) => setApelido(e.target.value)} placeholder='Apelido'></input>
-<input valeu={email} onChange={(e) => setEmail(e.target.value)} placeholder='E-mail'></input>
-<input valeu={password} onChange={(e) => setPassword(e.target.value)} placeholder='Senha'></input>
+<input value={apelido} onChange={(e) => setApelido(e.target.value)} placeholder='Apelido'></input>
+<input value={emailSignup} onChange={(e) => setEmailSignup(e.target.value)} placeholder='E-mail'></input>
+<input value={passwordSignup} onChange={(e) => setPasswordSignup(e.target.value)} placeholder='Senha'></input>
 
-{/* quando usar imagem colocar dentro de divnão colocar imagem dentro de botton */}
+{/* quando usar imagem colocar dentro de div não colocar imagem dentro de botton */}
 
-<Button onClick={() => goToLoginPage(navigate)}><img src={botaoCadastrar}></img></Button>
+<Button onClick={() => postSignup()}><img src={botaoCadastrar}></img></Button>
 
 <Contracts>
 

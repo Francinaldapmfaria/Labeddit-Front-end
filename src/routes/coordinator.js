@@ -7,7 +7,7 @@ export const goToSignupPage= (navigate) =>{
 }
 
 export const goToPostPage= (navigate, id) =>{
-    navigate(`/posts/${id}`)
+    navigate(`/posts`)
 }
 
 export const goToCommentsPage= (navigate,id) =>{

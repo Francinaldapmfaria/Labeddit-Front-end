@@ -12,8 +12,8 @@ const Router = () => {
         <Routes>
             <Route index element={<LoginPage/>}/>
             <Route path="/signup" element={<SignupPage/>}/>
-            <Route path="posts/:id" element={<PostPage/>}/>
-            <Route path="comments/:id" element={<CommentsPage/>}/>
+            <Route path="/posts" element={<PostPage/>}/>
+            <Route path="/comments/:id" element={<CommentsPage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
             
         </Routes>

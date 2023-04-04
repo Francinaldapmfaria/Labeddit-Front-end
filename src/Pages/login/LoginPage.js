@@ -57,8 +57,8 @@ const LoginPage = () => {
       <h1 className='Frase'>O Projeto da rede social da Labenu</h1>
       
 
-      <input valeu={emailLogin} onChange={(e) => setEmailLogin(e.target.value)} placeholder='E-mail' type="email" ></input>
-      <input valeu={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} placeholder='Senha' type="password"></input>
+      <input value={emailLogin} onChange={(e) => setEmailLogin(e.target.value)} placeholder='E-mail' type="email" ></input>
+      <input value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} placeholder='Senha' type="password"></input>
 
       <Buttons>
 
