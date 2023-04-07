@@ -25,12 +25,13 @@ const LoginPage = () => {
     "password": passwordLogin
   }
 
-  useEffect(() => {
-    postLogin()
-  },[])
-
+  
   //criar função para requisição
   const postLogin = async() => {
+    if(emailLogin.trim() === "" || passwordLogin.trim() === ""){
+      alert("Forneça senha e email para efetuar login")
+      return
+    }
     try{
       const response= await axios.post(`${BASE_URL}/users/login`, autorization)
       const token =response.data.token
@@ -63,11 +64,11 @@ const LoginPage = () => {
       <Buttons>
 
      {/* quando usar imagem colocar dentro de divnão colocar imagem dentro de botton */}
-      <Button onClick={() => postLogin()}><img  src={botaoContinuar}></img></Button>
+      <button className='button1' onClick={() => postLogin()}>Continuar</button>
 
-      <img src={linha} alt= "imagem linha"></img>
+      <img className='line' src={linha} alt= "imagem linha"></img>
 
-      <Button onClick={() => goToSignupPage(navigate)}><img src={botaoCrioConta}></img></Button>
+      <button className='button2' onClick={() => goToSignupPage(navigate)}>Crie uma Conta!</button>
 
       </Buttons>
 

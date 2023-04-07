@@ -6,7 +6,7 @@ export const goToSignupPage= (navigate) =>{
     navigate('/signup')
 }
 
-export const goToPostPage= (navigate, id) =>{
+export const goToPostPage= (navigate) =>{
     navigate(`/posts`)
 }
 

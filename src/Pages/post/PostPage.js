@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Header from "../../components/header/Header"
 import botaoPostar from "../../assets/img/postar.svg"
-import { Container } from './PostStyled'
-import { Button } from '../signup/SignupStyled'
+import { Container, Posted, Button, Button1 } from './PostStyled'
 import linha from "../../assets/img/Line.svg"
-import { goToCommentsPage } from '../../routes/coordinator'
+import { goToCommentsPage, goToLoginPage } from '../../routes/coordinator'
 import { Navigate, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../../constants/url'
@@ -25,14 +24,19 @@ const PostPage = () => {
 
   const [tokenStorage, setTokenStorage] = useState("")
 
-
+  const token = window.localStorage.getItem('token')
 
   useEffect(() => {
     getPosts()
+    if (token === ""){
+      goToLoginPage(navigate)
+    }else{
+      getPosts()
+    }
   }, [])
 
   const getPosts = async () => {
-    const token = window.localStorage.getItem('token')
+    
 
     try {
       const response = await axios.get(`${BASE_URL}/posts`, 
@@ -78,6 +82,23 @@ const PostPage = () => {
 
   }
 
+  const likeOrDislikePost = async (id, like) => {
+    try {
+     
+      await axios.put(`${BASE_URL}/posts/${id}/like`, {like}, {
+        headers: {
+          'Authorization': token
+        }
+      })
+      getPosts()
+
+    } catch (erro) {
+      console.log(erro)
+
+    }
+
+  }
+
 
 
   return (
@@ -89,31 +110,32 @@ const PostPage = () => {
 
         <div className='escreverPost'>
 
-          <input value={contentPost} onChange={(e) =>setContentPost(e.target.value)}  placeholder='Escreva seu post...'></input>
+        <textarea className='Texto' type="text" value={contentPost} onChange={(e) =>setContentPost(e.target.value)}  placeholder='Escreva seu post...'></textarea>
 
+         <button className='button1' onClick={() =>  postandoPost ()}>Postar</button>
 
-          <Button onClick={() =>  postandoPost ()} ><img src={botaoPostar}></img></Button>
+        <img src={linha} alt="imagem linha"></img>
 
         </div>
 
-        <img src={linha} alt="imagem linha"></img>
 
 
         <div>{posts.map((post) => {
           return (
-            <div>
+            <Posted>
               <p>Enviado por: {post.creator.name}</p>
               <p>{post.content}</p>
               <div>
-                <span>
-                  <img src={like}></img>
+                <span className='LIkeDislikeComments'>
+                  <Button onClick={() => likeOrDislikePost(post.id, true)} ><img src={like}></img></Button>
                   <span>{post.likes}</span>
-                  <img src={dislike}></img>
-                  <img src={comments}></img>
+                  <Button onClick={() => likeOrDislikePost(post.id, false)} ><img src={dislike}></img></Button>
+                  <span>{post.dislikes}</span>
+                  <Button onClick={() => goToCommentsPage(navigate, post.id)}><img src={comments}></img></Button>
                   <span>{post.comments}</span>
                 </span>
               </div>
-            </div>
+            </Posted>
 
           )
         })}

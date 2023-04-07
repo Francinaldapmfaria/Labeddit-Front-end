@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Container= styled.main `
+export const Container = styled.main`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -28,38 +28,74 @@ margin-top: 0.5px;
 }
 
 `
-export const Image = styled.img `
+export const Image = styled.img`
 width:23.42vh ;
 height:21.87vh ;
 
 
 `
-export const Buttons = styled.div `
-    margin-top: 30px;
+export const Buttons = styled.div`
+display: flex;
+flex-direction: column;
+margin-top: 2.5rem;
 
-    @media (max-width: 590px){
-             width: 380px;
-         }
+    .button1{
+        margin-top: 1rem;
+margin-bottom: 1rem;
+background: linear-gradient(90deg, #FF6489, #F9B24E);
+color:#FFFFFF;
+border-style:none;
+cursor:pointer;
+font-weight:bold;
+font-size: 18px;
+margin-left: 0.7rem;
+font-family:sans-serif;
+border-radius:2.5vh;
+width:22rem;
+height:6vh;
+@media (max-width: 480px) {
+    width: 18rem;
+    margin-right: 0.8rem;
+}
+@media (max-width: 320px) {
+    width: 14rem;
+    margin-left: 0.7rem;
+}
+    }
+    .line{
+        width: 23rem;
+        
+    }
+    
+    .button2{
+        margin-top: 1rem;
+margin-bottom: 1rem;
+color:#F9B24E;
+background-color: #FFFFFF;
+border-style:none;
+cursor:pointer;
+font-weight:bold;
+font-size: 18px;
+margin-left: 0.7rem;
+font-family:sans-serif;
+border-radius:2.5vh;
+width:22rem;
+height:6vh;
+border: 1px solid #F9B24E;
+@media (max-width: 480px) {
+    width: 18rem;
+    margin-right: 0.8rem;
+}
+@media (max-width: 320px) {
+    width: 14rem;
+    margin-left: 0.7rem;
+}
+    }
 
-         /* max-width- qdo chegar quebra */
-         @media (max-width: 390px){
-             width: 100px;
-             justify-content: center;
-             align-items: center;
-             margin-left: -280px;
-
-             
-         }
-
+    
 
 `
 
-export const Button = styled.div `
-margin: 1vh;
-
-      
-
-`
 
 
 

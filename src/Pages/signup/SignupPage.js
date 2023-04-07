@@ -69,7 +69,7 @@ function SignupPage() {
 
 {/* quando usar imagem colocar dentro de div não colocar imagem dentro de botton */}
 
-<Button onClick={() => postSignup()}><img src={botaoCadastrar}></img></Button>
+<Button onClick={() => postSignup()}>Cadastrar</Button>
 
 <Contracts>
 
