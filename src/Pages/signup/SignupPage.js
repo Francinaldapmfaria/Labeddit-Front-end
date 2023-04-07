@@ -52,13 +52,13 @@ function SignupPage() {
 
 <Button onClick={() => postSignup()}>Cadastrar</Button>
 <Contracts>
-<p>Ao continuar, você concorda com o nosso <a href='https://www.homehost.com.br/blog/tutoriais/links-html/'>Contrato de usuário</a>  
-<br/> e nossa <a href='https://www.homehost.com.br/blog/tutoriais/links-html/'>Política de Privacidade</a> </p>
+<p className='contrato'>Ao continuar, você concorda com o nosso <a href='https://www.homehost.com.br/blog/tutoriais/links-html/'> Contrato de <br/> usuário </a>  
+ e nossa <a href='https://www.homehost.com.br/blog/tutoriais/links-html/'> Política de Privacidade</a> </p>
 <label >
-<input type= "checkbox"name="checkbox"></input>
+
 </label>
-<p>Eu concordo em receber emails sobre coisas 
-  <br/>legais no Labeddit</p>
+<p className='concordo'><input className='checkbox' type= "checkbox"name="checkbox"></input>Eu concordo em receber emails sobre coisas 
+  legais no Labeddit</p>
 
 </Contracts>
 

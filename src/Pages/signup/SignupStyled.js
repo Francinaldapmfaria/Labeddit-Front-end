@@ -14,7 +14,7 @@ padding: 15px;
 width: 345px;
 margin-top: 0.5px;
 @media (max-width: 390px){
-         width: 280px;
+         width: 21rem;
          }
 }
 .fraseOla{
@@ -41,20 +41,32 @@ font-family:sans-serif;
 border-radius:2.5vh;
 width:24rem;
 height:6vh;
-@media (max-width: 480px) {
-    width: 18rem;
-    margin-right: 0.8rem;
+@media (max-width: 390px) {
+    width: 23rem;
 }
-@media (max-width: 320px) {
-    width: 14rem;
-    margin-left: 0.7rem;
+@media (max-width: 390px) {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 21rem;
 }
 `
 export const Contracts = styled.div `
-font-size: 2.15vh;
+font-size: 12px;
 font-weight: normal;
-color: #4088CB;
+color: black;
 text-decoration: none;
+margin-top: 10px;
+
+
+.concordo{
+    display: flex;
+    margin-top: 12px;
+    .checkbox{
+        width: 0.8rem;
+    }
+
+}
 
     @media (max-width: 390px){
              width: 280px;

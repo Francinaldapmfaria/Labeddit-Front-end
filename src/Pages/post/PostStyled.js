@@ -13,7 +13,7 @@ height: 100vh;
     justify-content: flex-start;
     margin-top: 30px;
     @media (max-width: 390px){
-        width: 280px;    
+        width: 21rem;    
          }
 
     .Texto{
@@ -25,7 +25,7 @@ height: 100vh;
     padding: 1rem;
 
     @media (max-width: 390px){
-             width: 280px;
+             width: 20.5rem;
          }
     }
 
@@ -43,11 +43,15 @@ height: 100vh;
     width:25rem;
     height:5vh;
     @media (max-width: 390px) {
-    width: 280px;
+    width: 23rem;
+    
       
 }
-    @media (max-width: 320px) {
-    width: 224px;
+    @media (max-width: 390px) {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 21rem;
 }
     }
 }
@@ -81,10 +85,12 @@ padding:10px;
     
 @media (max-width: 390px){
 display:flex;
-align-items:center;
+align-items:left;
 justify-content:center;
 flex-direction:column;
-width: 62vw;
+width: 20rem;
+gap: 9px;
+
          }
 >p{
 font-family:sans-serif;
@@ -98,29 +104,29 @@ gap:8px;
 export const Button = styled.div`
 
 `
-export const Button1 = styled.button`
-margin-top: 1rem;
-margin-bottom: 1rem;
-background: linear-gradient(90deg, #FF6489, #F9B24E);
-color:#FFFFFF;
-border-style:none;
-cursor:pointer;
-font-weight:bold;
-font-size: 18px;
-margin-left: 0.7rem;
-font-family:sans-serif;
-border-radius:2.5vh;
-width:22rem;
-height:6vh;
-@media (max-width: 480px) {
-width: 18rem;
-margin-right: 0.8rem;
-}
-@media (max-width: 320px) {
-width: 14rem;
-margin-left: 0.7rem;
-}
-`
+// export const Button1 = styled.button`
+// margin-top: 1rem;
+// margin-bottom: 1rem;
+// background: linear-gradient(90deg, #FF6489, #F9B24E);
+// color:#FFFFFF;
+// border-style:none;
+// cursor:pointer;
+// font-weight:bold;
+// font-size: 18px;
+// margin-left: 0.7rem;
+// font-family:sans-serif;
+// border-radius:2.5vh;
+// width:22rem;
+// height:6vh;
+// @media (max-width: 480px) {
+// width: 18rem;
+// margin-right: 0.8rem;
+// }
+// @media (max-width: 320px) {
+// width: 16rem;
+// margin-left: 0.7rem;
+// }
+// `
 
 
 

@@ -8,10 +8,11 @@ background-color:white ;
 height: 100vh;
 gap: 0.8rem;
     @media (max-width: 390px){
-    width: 24rem;
+    width: 24.5rem;
     display: flex;
     align-content: center;
     align-items: center;
+ 
          }
 
 .Card{
@@ -28,10 +29,10 @@ gap: 0.8rem;
     margin-top: 2rem;
 
     @media (max-width: 390px) {
-    width: 16rem;
+    width: 21rem;
     display: flex;
-   justify-content: center;
-    align-items: center;
+    justify-content: center;
+    align-items: left;
     
 }
     .Content{
@@ -83,7 +84,7 @@ export const PostComments = styled.div`
     margin-top: 10px;
     padding:10px;
     @media (max-width: 390px){
-             width: 16rem;
+             width: 22rem;
          }
    
     .LIkeDislikeComments{
@@ -107,14 +108,17 @@ export const EscreverComments = styled.div`
     background-color: #EDEDED;
     padding: 1rem;
     @media (max-width: 390px){
-    width: 16rem;
+    width: 25rem;
     display: flex;
     align-content: center;
     align-items: center;
     }
 }
 @media (max-width: 390px){
-             width: 16rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 22rem;
          }
 `
 
@@ -124,12 +128,16 @@ flex-direction:column;
 @media (max-width: 390px) {
 display: flex;
 align-content: center;
-align-items: center;     
+align-items: center; 
+    
 }
 img{
 @media (max-width: 390px) {
-width: 14rem;
-height:3rem;   
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 22rem;
+    height:3rem;   
 }
 }
 
@@ -149,7 +157,10 @@ border-radius:2.1vh;
 width:25rem;
 height:6vh;
 @media (max-width: 390px) {
-    width: 14rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 22rem;
     height:3rem;  
 }
 `
