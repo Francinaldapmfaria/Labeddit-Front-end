@@ -9,6 +9,7 @@ background-color:white ;
 height: 100vh;
 width: 100%;
 
+
 input{
 margin: 1vh;
 padding: 15px;
@@ -22,6 +23,13 @@ margin-top: 0.5px;
 .Frase{
     margin-bottom: 56px;
     font-size:18px ;
+    font-family: sans-serif;
+}
+
+.Frase2{
+    font-size: 14px;
+    color:orange;
+    margin-top: 21px;
     font-family: sans-serif;
 }
 `

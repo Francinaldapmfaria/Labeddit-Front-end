@@ -8,7 +8,7 @@ background-color:white ;
 height: 100vh;
 gap: 0.8rem;
     @media (max-width: 390px){
-    width: 18rem;
+    width: 24rem;
     display: flex;
     align-content: center;
     align-items: center;
@@ -97,20 +97,20 @@ export const EscreverComments = styled.div`
 
 .Texto{
     width: 25rem;
-    height: 120px;
+    height: 7.5rem;
     border-radius:10px;
     border: 1px solid #E5E5E5;
     background-color: #EDEDED;
     padding: 1rem;
     @media (max-width: 390px){
-    width: 15rem;
+    width: 16rem;
     display: flex;
     align-content: center;
     align-items: center;
     }
 }
 @media (max-width: 390px){
-             width: 14rem;
+             width: 16rem;
          }
 `
 

@@ -54,6 +54,8 @@ const LoginPage = () => {
       <button className='button2' onClick={() => goToSignupPage(navigate)}>Crie uma Conta!</button>
       </Buttons>
       
+      <h2 className='Frase2'>Desenvolvido por Francinalda Portela Moura de Farua</h2>
+      
     </Container>
   )
 }
