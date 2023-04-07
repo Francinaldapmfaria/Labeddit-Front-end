@@ -9,10 +9,15 @@ import { goToLoginPage } from '../../routes/coordinator'
 
 const Header = () => {
 
-  // const params = useParams()
+  const params = useParams()
 
   const navigate = useNavigate()
   const location = useLocation()
+
+  const deleteLogin= () =>{
+    localStorage.removeItem("token")
+    goToLoginPage(navigate)
+  }
 
   const individualizingHeader = () => {
     switch (location.pathname) {
@@ -39,19 +44,23 @@ const Header = () => {
               <img src={imglabenu} alt="logo Labenu"></img>
             </div>
 
-            <Button className='botao' onClick={() =>goToLoginPage(navigate)}><img src={imgBotaoLogout}></img></Button>
+         <div className='botao'>
+
+            <Button  onClick={ deleteLogin}><img src={imgBotaoLogout}></img></Button>
+         </div>
+          
 
           </>
         )
 
-      case "/comments/id":
+      case `/comments/${params.id}`:
         return (
           <>
             <div className='logoLabenu' >
               <img src={imglabenu} alt="logo Labenu"></img>
             </div>
 
-            <Button className='botao' onClick={() => goToLoginPage(navigate)}><img src={imgBotaoLogout}></img></Button>
+            <Button className='botao' onClick={ deleteLogin}><img src={imgBotaoLogout}></img></Button>
 
           </>
         )
