@@ -53,8 +53,8 @@ const LoginPage = () => {
       <img className='line' src={linha} alt= "imagem linha"></img>
       <button className='button2' onClick={() => goToSignupPage(navigate)}>Crie uma Conta!</button>
       </Buttons>
-      
-      <h2 className='Frase2'>Desenvolvido por Francinalda Portela Moura de Farua</h2>
+
+      <h2 className='Frase2'>Desenvolvido por Francinalda Portela Moura de Faria</h2>
       
     </Container>
   )
