@@ -9,14 +9,10 @@ import "./app.css";
 function App() {
   return (
     <>
-    
     <GlobalStyled/>
     <Router/>
-   
     </>
 
-  
   );
 }
-
 export default App;
