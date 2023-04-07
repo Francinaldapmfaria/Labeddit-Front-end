@@ -85,13 +85,17 @@ export const PostComments = styled.div`
     @media (max-width: 390px){
              width: 16rem;
          }
-    >p{
-        font-family:sans-serif;
-    }
+   
     .LIkeDislikeComments{
         display: flex;
         gap: 8px;
     }
+    .Enviadopor{
+        font-family: 'IBM Plex Sans';
+        font-size: 12px;
+        color: #6F6F6F;
+    }
+    
 `
 export const EscreverComments = styled.div`
 

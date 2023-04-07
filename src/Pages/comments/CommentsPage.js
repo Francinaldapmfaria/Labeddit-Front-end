@@ -120,7 +120,11 @@ const CommentsPage = () => {
       <Header />
     <Container>
       <PostComments>
-        <p>Enviado por: {postId.name}</p>
+
+        <div className='Enviadopor'>
+        <p >Enviado por: {postId.name}</p>
+        </div>
+        
         <p> {postId.content}</p>
 
         <div className='LIkeDislikeComments'>
