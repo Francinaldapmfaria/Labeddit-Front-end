@@ -28,7 +28,7 @@ margin-top: 0.5px;
 
 .Frase2{
     font-size: 14px;
-    color:orange;
+    color:#F9B24E;
     margin-top: 21px;
     font-family: sans-serif;
 }
