@@ -46,21 +46,24 @@ function SignupPage() {
 
 <h1 className='fraseOla'>Olá, boas vindas ao
 <br/> LabEddit;) </h1>
+
+<div className='todosInputs'>
 <input value={apelido} onChange={(e) => setApelido(e.target.value)} placeholder='Apelido'></input>
 <input value={emailSignup} onChange={(e) => setEmailSignup(e.target.value)} placeholder='E-mail'></input>
 <input value={passwordSignup} onChange={(e) => setPasswordSignup(e.target.value)} placeholder='Senha'></input>
 
-<Button onClick={() => postSignup()}>Cadastrar</Button>
 <Contracts>
 <p className='contrato'>Ao continuar, você concorda com o nosso <a href='https://www.homehost.com.br/blog/tutoriais/links-html/'> Contrato de <br/> usuário </a>  
  e nossa <a href='https://www.homehost.com.br/blog/tutoriais/links-html/'> Política de Privacidade</a> </p>
-<label >
 
-</label>
+<label >
 <p className='concordo'><input className='checkbox' type= "checkbox"name="checkbox"></input>Eu concordo em receber emails sobre coisas 
   legais no Labeddit</p>
+</label>
 
 </Contracts>
+<Button onClick={() => postSignup()}>Cadastrar</Button>
+</div>
 
 </Container>
     </>

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Container= styled.main `
+export const Container= styled.div `
 display: flex;
 flex-direction: column;
 width: 100%;
@@ -12,9 +12,9 @@ height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 30px;
-    @media (max-width: 390px){
+    /* @media (max-width: 390px){
         width: 21rem;    
-         }
+         } */
 
     .Texto{
     width: 25rem;
@@ -24,9 +24,10 @@ height: 100vh;
     background-color: #EDEDED;
     padding: 1rem;
 
-    @media (max-width: 390px){
+    /* @media (max-width: 390px){
              width: 20.5rem;
          }
+     */
     }
 
     .button1{
@@ -42,20 +43,20 @@ height: 100vh;
     border-radius:1.5vh;
     width:25rem;
     height:5vh;
-    @media (max-width: 390px) {
+    /* @media (max-width: 390px) {
     width: 23rem;
-    
+     */
       
-}
+/* }
     @media (max-width: 390px) {
     display:flex;
     align-items:center;
     justify-content:center;
     width: 21rem;
-}
+} */
     }
-}
-    input{
+
+    /* input{
     margin: 1vh;
     padding: 10px;
     height: 200px;
@@ -63,11 +64,11 @@ height: 100vh;
     margin-top: 0.5px;
     border-radius: 5%;
     background-color: #EDEDED;
-    border: none;
+    border: none; */
 
-    @media (max-width: 390px){
+    /* @media (max-width: 390px){
              width: 280px;
-         }
+         } */
 }
 `
 export const Posted = styled.div`
@@ -83,7 +84,7 @@ min-height:15vh;
 margin-top: 10px;
 padding:10px;
     
-@media (max-width: 390px){
+/* @media (max-width: 390px){
 display:flex;
 align-items:left;
 justify-content:center;
@@ -91,7 +92,7 @@ flex-direction:column;
 width: 20rem;
 gap: 9px;
 
-         }
+         } */
 >p{
 font-family:sans-serif;
 }
