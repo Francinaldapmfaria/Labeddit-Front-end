@@ -17,11 +17,22 @@ export const HeaderStyled = styled.header`
     display: flex;
     justify-content: space-around;
 
+    @media (max-width: 390px){
+             width: 17rem;
+         }
+
+
     .logoLabenu{
         width: 50%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
+        @media (max-width: 390px){
+            display: flex;
+            align-items: center;
+             width: 17rem;
+         }
 
         img{
             width: 40px;
@@ -35,13 +46,31 @@ export const HeaderStyled = styled.header`
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
-    
 
+        @media (max-width: 390px){
+             display: flex;
+             width: 55px;
+             margin-left: 4rem;
+             align-items: center;
+             
+         }
+       
+    }
+ 
 `
 
-
  export const Button= styled.div`
-    width: 20px;
-    margin-right:50px;
+    width: 2rem;
+    margin-right:3.5rem;
+
+    @media (max-width: 390px){
+             display: flex;
+             width: 15px;
+             margin-right: 4rem;
+           
+             
+         }
+
+   
+ 
  `
