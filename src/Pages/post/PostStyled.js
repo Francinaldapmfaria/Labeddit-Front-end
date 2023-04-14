@@ -7,6 +7,7 @@ width: 100%;
 align-items: center;
 background-color:white ;
 height: 100vh;
+
     .escreverPost{
     display: flex;
     flex-direction: column;
@@ -17,17 +18,21 @@ height: 100vh;
          } */
 
     .Texto{
-    width: 25rem;
+    width: 24.5rem;
     height: 120px;
     border-radius:10px;
     border: 1px solid #E5E5E5;
     background-color: #EDEDED;
     padding: 1rem;
 
-    /* @media (max-width: 390px){
-             width: 20.5rem;
-         }
-     */
+    @media (max-width: 405px) {
+    width: 22rem;
+    margin-left: 0.5rem;
+    
+   
+}
+
+    
     }
 
     .button1{
@@ -41,19 +46,16 @@ height: 100vh;
     font-size: 18px;
     font-family:sans-serif;
     border-radius:1.5vh;
-    width:25rem;
+    width:24rem;
     height:5vh;
-    /* @media (max-width: 390px) {
-    width: 23rem;
-     */
-      
-/* }
-    @media (max-width: 390px) {
+ 
+    @media (max-width: 405px) {
     display:flex;
     align-items:center;
     justify-content:center;
-    width: 21rem;
-} */
+    width: 22rem;
+    margin-left:0.5rem;
+}
     }
 
     /* input{
@@ -79,10 +81,17 @@ justify-content:space-between;
 flex-direction:column;
 border: 1px solid #E5E5E5;
 border-radius:15px;
-width:26vw;
+width:24rem;
 min-height:15vh;
 margin-top: 10px;
 padding:10px;
+
+@media (max-width: 405px) {
+    width: 22rem;
+    margin-left: 0.5rem;
+    
+   
+}
     
 /* @media (max-width: 390px){
 display:flex;
