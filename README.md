@@ -24,7 +24,7 @@ Arquitetura em Camadas
 
 # Deploy 
 
-https://projeto-labeddit-ammal-franpmf.surge.sh/
+https://labeddit-front-end-chi.vercel.app/
 
 
 # Link do repositório Labeddit Back-end
