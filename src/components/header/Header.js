@@ -24,8 +24,6 @@ const Header = () => {
       case "/signup":
         return (
           <>
-
-
             <div className='logoLabenu'>
               <img src={imglabenu} alt="logo labenu pequeno"></img>
             </div>
@@ -60,7 +58,10 @@ const Header = () => {
               <img src={imglabenu} alt="logo Labenu"></img>
             </div>
 
-            <Button className='botao' onClick={ deleteLogin}><img src={imgBotaoLogout}></img></Button>
+            <div className='botao'>
+
+            <Button  onClick={ deleteLogin}><img src={imgBotaoLogout}></img></Button>
+            </div>
 
           </>
         )
