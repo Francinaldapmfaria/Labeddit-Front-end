@@ -1,24 +1,15 @@
 import styled from "styled-components"
 
 export const HeaderStyled = styled.header`
-   /* display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
-    background-color:#EDEDED ;
-    height:8vh;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around; */
-    /* overflow: -moz-hidden-unscrollable; */
+
     width: 100%;
     height: 8vh;
     background-color: #EDEDED;
     display: flex;
     justify-content: space-around;
 
-    @media (max-width: 390px){
-             width: 17rem;
+    @media (max-width: 405px){
+             width: 100%;
          }
 
 
@@ -28,7 +19,7 @@ export const HeaderStyled = styled.header`
         justify-content: flex-end;
         align-items: center;
 
-        @media (max-width: 390px){
+        @media (max-width: 405px){
             display: flex;
             align-items: center;
              width: 17rem;
@@ -47,14 +38,12 @@ export const HeaderStyled = styled.header`
         justify-content: flex-end;
         align-items: center;
 
-        @media (max-width: 390px){
+        @media (max-width: 405px){
              display: flex;
              width: 55px;
-             margin-left: 4rem;
+             margin-left: 7rem;
              align-items: center;
-             
          }
-       
     }
  
 `
@@ -63,14 +52,10 @@ export const HeaderStyled = styled.header`
     width: 2rem;
     margin-right:3.5rem;
 
-    @media (max-width: 390px){
+    @media (max-width: 405px){
              display: flex;
              width: 15px;
              margin-right: 4rem;
            
-             
          }
-
-   
- 
  `

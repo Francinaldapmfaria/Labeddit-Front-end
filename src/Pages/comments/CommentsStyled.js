@@ -7,11 +7,13 @@ align-items: center;
 background-color:white ;
 height: 100vh;
 gap: 0.8rem;
-    @media (max-width: 390px){
+
+    @media (max-width: 405px){
     width: 24.5rem;
     display: flex;
     align-content: center;
     align-items: center;
+    margin-left:0.4rem;
  
          }
 
@@ -25,14 +27,14 @@ gap: 0.8rem;
     background: #FBFBFB;
     border: 1px solid #E0E0E0;
     border-radius: 12px;
-    gap: 0.5rem;
     margin-top: 2rem;
 
-    @media (max-width: 390px) {
-    width: 21rem;
+    @media (max-width: 405px) {
+    width: 22rem;
     display: flex;
     justify-content: center;
     align-items: left;
+    
     
 }
     .Content{
@@ -46,6 +48,7 @@ gap: 0.8rem;
         margin-right: 7rem;
         color: #6F6F6F;
         }
+
         h2 {
         font-family: 'IBM Plex Sans';
         font-style: normal;
@@ -54,36 +57,37 @@ gap: 0.8rem;
         line-height: 23px;
         color: #000000;
         }
-        .LikeDislike {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-top: 2rem;
-            @media (max-width: 390px){
-             width: 13rem;
-             display: flex;
-            align-content: center;
-            align-items: center;
-         }
 
+        .LikeDislike {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 2rem;
+        @media (max-width: 390px){
+        width: 13rem;
+        display: flex;
+        align-content: center;
+        align-items: center;
+         }
         }
     }
 }
 
 `
 export const PostComments = styled.div`
-    display:flex;
-    align-items: right;
-    justify-content:space-between;
-    flex-direction:column;
-    border: 1px solid #E5E5E5;
-    border-radius:15px;
-    width:25rem;
-    min-height:15vh;
-    margin-top: 10px;
-    padding:10px;
-    @media (max-width: 390px){
+display:flex;
+align-items: right;
+justify-content:space-between;
+flex-direction:column;
+border: 1px solid #E5E5E5;
+border-radius:15px;
+width:25rem;
+min-height:15vh;
+margin-top: 10px;
+padding:10px;
+
+    @media (max-width: 405px){
              width: 22rem;
          }
    
@@ -107,32 +111,29 @@ export const EscreverComments = styled.div`
     border: 1px solid #E5E5E5;
     background-color: #EDEDED;
     padding: 1rem;
-    @media (max-width: 390px){
-    width: 25rem;
+    @media (max-width: 405px){
+    width: 22rem;
     display: flex;
     align-content: center;
     align-items: center;
     }
 }
-@media (max-width: 390px){
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width: 22rem;
-         }
+
 `
 
 export const ButtonResponder = styled.div`
 display:flex;
 flex-direction:column;
-@media (max-width: 390px) {
+@media (max-width: 405px) {
 display: flex;
 align-content: center;
 align-items: center; 
+width: 23rem;
     
 }
-img{
-@media (max-width: 390px) {
+    img{
+
+    @media (max-width: 405px) {
     display:flex;
     align-items:center;
     justify-content:center;
@@ -156,12 +157,14 @@ font-family:sans-serif;
 border-radius:2.1vh;
 width:25rem;
 height:6vh;
-@media (max-width: 390px) {
+
+@media (max-width: 405px) {
     display:flex;
     align-items:center;
     justify-content:center;
     width: 22rem;
-    height:3rem;  
+    margin-right: .5rem;
+   
 }
 `
 export const Button = styled.div``
